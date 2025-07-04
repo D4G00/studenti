@@ -26,6 +26,13 @@ $iscrizioni = $mysqli->query("
 ");
 ?>
 
+<head>
+<link rel="stylesheet" href="stile.css">
+</head>
+
+<?php include 'header.php'; ?>
+
+<body>
 <h3>Iscrivi uno studente a una materia</h3>
 <form method="POST">
     <label>Studente:</label>
@@ -52,9 +59,9 @@ $iscrizioni = $mysqli->query("
     <?php endwhile; ?>
 </ul>
 
+    </body>
 
-
-
+<?php include 'footer.php'; ?>
 
 
 

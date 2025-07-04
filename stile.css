@@ -1,19 +1,4 @@
-<?php
-
-
-
-
-?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-
-  <title>Registrazioni</title>
-  
-  <style>
-    nav ul {
+nav ul {
       list-style: none;
       padding: 0;
       gap: 20px;
@@ -70,42 +55,3 @@
      border-top: 3px solid goldenrod;
      font-size: 15px;
     }
-
-    
-    
-    
-  </style> 
-  
-</head>
-
- <header class="header-container">
-    <h2>Servizio Registrazioni Scolastiche</h2>
-    <nav>
-      <ul>
-        <li><a href="http://localhost/studenti/homeex1.php">Home</a></li>
-        <li><a href="http://localhost/studenti/inserimentomaterie.php">Registra materia</a></li>
-        <li><a href="http://localhost/studenti/inserimentostudenti.php">Registra studente</a></li>
-        <li><a href="http://localhost/studenti/iscrizioni.php">Iscrivi studente</a></li>
-        <li><a href="https://www.mim.gov.it/">MIUR</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-<body>
-
- 
-
-</body>
-
-<footer class="footer">
-  <p>@2025 Servizio Registrazioni Scolastiche - Tutti i diritti riservati.</p>
-</footer>
-
-</html>
-
-
-
-
-
-

@@ -5,6 +5,13 @@
 
 
 <html>
+
+<head>
+<link rel="stylesheet" href="stile.css">
+</head>
+
+<?php include 'header.php'; ?>
+
 <body>
   
     <h1>Inserimento nuovo studente</h1><br>
@@ -24,16 +31,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 </body>
+
+<?php include 'footer.php'; ?>
+
+
+
 </html>

@@ -3,6 +3,14 @@
 ?>
 
 <html>
+<head>
+  <link rel="stylesheet" href="stile.css">
+</head>
+
+
+<?php include 'header.php'; ?>
+
+
 <body>
   
     <h1>Inserimento nuova materia</h1><br>
@@ -19,17 +27,8 @@
 
     </form>
 
-
-
-
-
-
-
-
-
-
-
-
+    
+<?php include 'footer.php'; ?>
 
 
 </body>
