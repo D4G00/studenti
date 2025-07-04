@@ -1,3 +1,12 @@
+<head>
+  <link rel="stylesheet" href="stile.css">
+</head>
+
+
+<?php include 'header.php'; ?>
+
+<body>
+
 <?php include 'db.php';
 
  $nome=$_POST['nome'];
@@ -37,8 +46,17 @@
 ?>
 
 
+
+
+
 <ul>
 <?php while ($r = $materie->fetch_assoc()): ?>
   <li><?= $r['nome'] ?></li>
 <?php endwhile; ?>
 </ul>
+
+</body>
+
+
+
+<?php include 'footer.php'; ?>

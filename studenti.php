@@ -1,3 +1,14 @@
+
+<head>
+  <link rel="stylesheet" href="stile.css">
+</head>
+
+
+<?php include 'header.php'; ?>
+
+<body>
+
+
 <?php include 'db.php';
 
   $nome=$_POST['nome'];
@@ -6,9 +17,8 @@
 
    echo "<h3>Nuovo studente</h3><br>" . "Nome:    " . $nome . "<br>Cognome:    " . $cognome . "<br>email:    " . $email . "<br><br><br>"; 
 
-     $sql="INSERT INTO studenti (nome, cognome, email)VALUES";
-           $sql.="('$nome' , '$cognome' , '$email');";
-           echo $sql."<br><br>------";
+     $sql="INSERT INTO studenti (nome, cognome, email) VALUES ('$nome' , '$cognome' , '$email');";
+           echo "------";
             
             $servername = "localhost";
             $username = "root";
@@ -28,7 +38,7 @@
           
         $conn->close();
 
- echo "<h4>Elenco studenti</h4><br>";
+ echo "<h4>Elenco studenti</h4>";
 
 
    $studenti = $mysqli->query("SELECT nome FROM studenti");
@@ -43,3 +53,7 @@
 <?php endwhile; ?>
 </ul>
 
+</body>
+
+
+<?php include 'footer.php'; ?>
