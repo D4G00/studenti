@@ -1,0 +1,16 @@
+<?php
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home Scolastica</title>
+</head>
+<body>
+    <h1>HOME SCOLASTICA</h1>
+</body>
+</html>
