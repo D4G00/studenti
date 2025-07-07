@@ -14,9 +14,8 @@
   echo "Nome materia:    " . $nome . "<br><br><br>";
 
 
-  $sql="INSERT INTO materie (nome)VALUES";
-           $sql.="('$nome');";
-           echo $sql."<br><br>------";
+  $sql="INSERT INTO materie (nome) VALUES ('$nome');";
+           echo "------";
             
             $servername = "localhost";
             $username = "root";
