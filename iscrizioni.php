@@ -1,5 +1,8 @@
 <?php
-include 'db.php';
+require_once 'db.php';
+$db = new ConnessioneDB();
+$mysqli = $db->getConn();  
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $idstudente = $_POST['studente'];

@@ -20,12 +20,6 @@
      $sql="INSERT INTO studenti (nome, cognome, email) VALUES ('$nome' , '$cognome' , '$email');";
            echo "------";
             
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "studenti_db";
-            
-         $conn = new mysqli($servername, $username, $password, $dbname);
          
           if($conn->connect_error) {
            die("<br>tentativo di connessione al db fallita<br>" . $conn->connect_error); }

@@ -1,12 +1,17 @@
 <?php
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname   = 'studenti_db';
+class ConnessioneDB {
+    private $conn;
 
-$mysqli = new mysqli($servername, $username, $password, $dbname);
+    public function __construct() {
+        $this->conn = new mysqli("localhost", "root", "", "studenti_db");
+        if ($this->conn->connect_error) {
+            die("Connessione fallita: " . $this->conn->connect_error);
+        }
+    }
 
-if ($mysqli->connect_error) {
-    die("Connessione fallita: " . $mysqli->connect_error);
+    public function getConn() {
+        return $this->conn;  // questo metodo restituisce l'oggetto mysqli
+    }
 }
 ?>
+

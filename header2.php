@@ -1,11 +1,3 @@
-<?php
-require_once 'Utente.php';
-if (!Utente::autenticato()) {
-    header("Location: login.php");
-    exit;
-}
-?>
-
 <header class="header-container">
     <h2>Servizio Registrazioni Scolastiche</h2>
     <nav>
@@ -15,7 +7,7 @@ if (!Utente::autenticato()) {
         <li><a href="http://localhost/studenti/inserimentostudenti.php">Registra studente</a></li>
         <li><a href="http://localhost/studenti/iscrizioni.php">Iscrivi studente</a></li>
         <li><a href="https://www.mim.gov.it/">MIUR</a></li>
-        <li><a href="http://localhost/studenti/logout.php">Logout</a></li>
+        <li><a href="http://localhost/studenti/login.php">Login</a></li>
       </ul>
     </nav>
   </header>

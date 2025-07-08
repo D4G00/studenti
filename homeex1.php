@@ -22,7 +22,7 @@
 
 </head>
 
-<?php include 'header.php'; ?>
+<?php include 'header2.php'; ?>
 
 <body>
     <h1>HOME SCOLASTICA</h1>
