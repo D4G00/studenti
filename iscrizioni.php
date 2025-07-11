@@ -31,12 +31,34 @@ $iscrizioni = $mysqli->query("
 
 <head>
 <link rel="stylesheet" href="stile.css">
+
+<style>
+
+  h1{
+    text-align: center;
+  }
+
+  form{
+    text-align: center;
+  }
+
+  ul li{
+    text-align: center;
+  }
+
+  h3{
+    text-align: center;
+  }
+
+  </style>
+
+
 </head>
 
 <?php include 'header.php'; ?>
 
 <body>
-<h3>Iscrivi uno studente a una materia</h3>
+<h1>Iscrivi uno studente a una materia</h1>
 <form method="POST">
     <label>Studente:</label>
     <select name="studente">

@@ -1,24 +1,23 @@
-<?php
-require_once 'utente.php';
-$connessione = new ConnessioneDB();
-$utente = new utente($connessione);
+<head>
+    <link rel="stylesheet" href="stile.css">
+</head>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($utente->login($_POST['username'], $_POST['password'])) {
-        header("Location: protetta.php");
-        exit;
-    } else {
-        echo "Login fallito.";
-    }
-}
-?>
+<?php include 'header2.php'; ?>
 
-<form method="POST" action="utente.php">
+  <h3>Effettua login</h3>
 
-    Username:<input type="name" name="username">
-    password:<input type="password" name="password">
+<body>
+
+<form method="POST" action="passaggiologin.php">
+
+    Username:<input type="name" name="username"><br>
+    password:<input type="password" name="password"><br><br>
 
     <input type="submit" name="login">
     <input type="reset" name="Reset">
 
 </form>
+
+</body>
+
+<?php include 'footer.php'; ?>

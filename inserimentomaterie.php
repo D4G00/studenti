@@ -1,10 +1,24 @@
 <?php
-
+require_once 'db.php';
 ?>
 
 <html>
 <head>
   <link rel="stylesheet" href="stile.css">
+
+  <style>
+
+  h1{
+    text-align: center;
+  }
+
+  form{
+    text-align: center;
+  }
+
+
+  </style>
+
 </head>
 
 

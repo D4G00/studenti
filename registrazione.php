@@ -1,25 +1,23 @@
-<?php
-require_once 'utente.php';
-$connessione = new ConnessioneDB();
-$utente = new Utente($connessione);
+<head>
+    <link rel="stylesheet" href="stile.css">
+</head>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($utente->registra($_POST['username'], $_POST['password'])) {
-        echo "Registrazione completata. <a href='login.php'>Accedi</a>";
-    } else {
-        echo "Errore nella registrazione.";
-    }
-}
-?>
+<?php include 'header2.php'; ?>
 
-<form method="POST">
+  <h3>Effettua registrazione</h3>
 
-<h1>REGISTRAZIONE UTENTE</h1>
+<body>
 
-    Nome Utente:<input type="name" name="username">
-    Password:<input type="password" name="password" required placeholder="Password">
-    <input type="submit" name="Invia">
+<form method="POST" action="passaggioregistrazione.php">
+
+    Username:<input type="name" name="username"><br>
+    password:<input type="password" name="password"><br><br>
+
+    <input type="submit" name="login">
     <input type="reset" name="Reset">
 
-
 </form>
+
+</body>
+
+<?php include 'footer.php'; ?>

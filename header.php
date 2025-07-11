@@ -1,5 +1,5 @@
 <?php
-require_once 'Utente.php';
+require_once 'utente.php';
 if (!Utente::autenticato()) {
     header("Location: login.php");
     exit;

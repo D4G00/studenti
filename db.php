@@ -10,7 +10,7 @@ class ConnessioneDB {
     }
 
     public function getConn() {
-        return $this->conn;  // questo metodo restituisce l'oggetto mysqli
+        return $this->conn;  
     }
 }
 ?>
