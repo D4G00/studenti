@@ -14,7 +14,7 @@ text-align: center;
 <?php include 'header.php'; ?>
 
 <?php
-require_once 'Utente.php';
+require_once 'utente.php';
 
 if (!Utente::autenticato()) {
     header("Location: http://localhost/studenti/login.php");

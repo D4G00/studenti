@@ -80,7 +80,7 @@ $iscrizioni = $mysqli->query("
 <h3>Elenco iscrizioni</h3>
 <ul>
     <?php while ($i = $iscrizioni->fetch_assoc()): ?>
-        <li><?= $i['nome_studente'] ?> → <?= $i['nome_materia'] ?></li>
+    <li><?= $i['nome_studente'] ?> → <?= $i['nome_materia'] ?></li>
     <?php endwhile; ?>
 </ul>
 

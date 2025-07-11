@@ -1,53 +1,59 @@
 
+<?php
+require_once 'header.php'; 
+require_once 'db.php';     
+?>
+
 <head>
   <link rel="stylesheet" href="stile.css">
 </head>
 
-
-<?php include 'header.php'; ?>
-
 <body>
+<?php
+
+$nome = $_POST['nome'];
+$cognome = $_POST['cognome'];
+$email = $_POST['email'];
+
+echo "<h3>Nuovo studente</h3><br>Nome: $nome <br>Cognome: $cognome <br>Email: $email<br><br><br>";
 
 
-<?php include 'db.php';
-
-  $nome=$_POST['nome'];
-  $cognome=$_POST['cognome'];
-  $email=$_POST['email'];
-
-   echo "<h3>Nuovo studente</h3><br>" . "Nome:    " . $nome . "<br>Cognome:    " . $cognome . "<br>email:    " . $email . "<br><br><br>"; 
-
-     $sql="INSERT INTO studenti (nome, cognome, email) VALUES ('$nome' , '$cognome' , '$email');";
-           echo "------";
-            
-         
-          if($conn->connect_error) {
-           die("<br>tentativo di connessione al db fallita<br>" . $conn->connect_error); }
-         
-          if($conn->query($sql) === TRUE) {
-           echo "<br> record inserito correttamente.<br><br>"; }
-           
-          else{
-          echo "<br>ERRORE." . $sql . "<br>" . $conn->error ; }
-          
-        $conn->close();
-
- echo "<h4>Elenco studenti</h4>";
+$db = new ConnessioneDB();
+$conn = $db->getConn();
 
 
-   $studenti = $mysqli->query("SELECT nome FROM studenti");
+$query = "INSERT INTO studenti (nome, cognome, email) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($query);
+if ($stmt) {
+    $stmt->bind_param("sss", $nome, $cognome, $email);
+    if ($stmt->execute()) {
+        echo "<br>Record inserito correttamente.<br><br>";
+    } else {
+        echo "<br>Errore durante l'inserimento: " . $stmt->error;
+    }
+    $stmt->close();
+} else {
+    echo "<br>Errore nella preparazione della query: " . $conn->error;
+}
 
 
+echo "<h3>Elenco studenti</h3>";
+
+$result = $conn->query("SELECT nome FROM studenti");
+if ($result && $result->num_rows > 0):
 ?>
+    <ul>
+    <?php while ($r = $result->fetch_assoc()): ?>
+        <li><?= htmlspecialchars($r['nome']) ?></li>
+    <?php endwhile; ?>
+    </ul>
+<?php
+else:
+    echo "<p>Nessuno studente trovato.</p>";
+endif;
 
-        
-<ul>
-<?php while ($r = $studenti->fetch_assoc()): ?>
-  <li><?= $r['nome'] ?></li>
-<?php endwhile; ?>
-</ul>
-
+$conn->close();
+?>
 </body>
-
 
 <?php include 'footer.php'; ?>

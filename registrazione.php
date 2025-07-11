@@ -2,8 +2,10 @@
     <link rel="stylesheet" href="stile.css">
 </head>
 
-<?php include 'header2.php'; ?>
-
+<?php 
+include 'header2.php'; 
+require_once 'db.php';
+?>
   <h3>Effettua registrazione</h3>
 
 <body>
