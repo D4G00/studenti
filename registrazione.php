@@ -1,12 +1,26 @@
 <head>
     <link rel="stylesheet" href="stile.css">
+
+  <style>
+
+  h1{
+    text-align: center;
+  }
+
+  form{
+    text-align: center;
+  }
+
+  </style>
+
+
 </head>
 
 <?php 
 include 'header2.php'; 
 require_once 'db.php';
 ?>
-  <h3>Effettua registrazione</h3>
+  <h1>Effettua registrazione</h1>
 
 <body>
 

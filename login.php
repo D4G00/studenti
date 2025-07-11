@@ -1,10 +1,23 @@
 <head>
     <link rel="stylesheet" href="stile.css">
+
+  <style>
+
+  h1{
+    text-align: center;
+  }
+
+  form{
+    text-align: center;
+  }
+
+  </style>
+
 </head>
 
 <?php include 'header2.php'; ?>
 
-  <h3>Effettua login</h3>
+  <h1>Effettua login</h1>
 
 <body>
 
